@@ -10,7 +10,7 @@
 |________||_____||_____||______|__|__|_____|____||__|__|
                                                         
   WebCheck v1.0 -- Web Vulnerability & Recon Tool
-                          by X3RX3S
+                    by X3RX3S
   https://github.com/X3RX3SSec  instagram @mindfuckerrrr
 ```
 
@@ -26,7 +26,7 @@
 
 ## Features
 
-WebCheck covers **28 security modules** across reconnaissance, vulnerability detection, and reporting — all with zero external dependencies (pure Python 3 stdlib).
+WebCheck covers **28 security modules** across reconnaissance, vulnerability detection, and reporting all with zero external dependencies (pure Python 3 stdlib).
 
 | # | Module | What it checks |
 |---|--------|----------------|
@@ -64,7 +64,7 @@ WebCheck covers **28 security modules** across reconnaissance, vulnerability det
 ## Requirements
 
 - Python 3.8 or higher (tested on 3.10, 3.11, 3.13)
-- No external libraries required — uses stdlib only
+- No external libraries required, uses stdlib only ;)
 
 ---
 
@@ -91,29 +91,29 @@ Enter your target, pick modules or a preset from the menu, and go.
 ### CLI flags
 ```bash
 # Scan a specific target with a preset
-python3 webcheck.py --target example.com --preset web
+python3 webcheck.py --target fbi.gov --preset web
 
 # Pick individual modules
-python3 webcheck.py --target example.com --modules 1,3,9,25
+python3 webcheck.py --target cia.gov --modules 1,3,9,25
 
 # Save an HTML report
-python3 webcheck.py --target example.com --preset full --output html
+python3 webcheck.py --target nsa.gov --preset full --output html
 
 # Add a delay between requests (ms) to avoid WAF triggers
-python3 webcheck.py --target example.com --preset quick --delay 500
+python3 webcheck.py --target trump.com --preset quick --delay 500
 
 # Scan a list of hosts from a file
 python3 webcheck.py --hosts targets.txt --preset quick --output json
 
 # Skip the banner (useful for scripting)
-python3 webcheck.py --target example.com --no-banner --preset recon
+python3 webcheck.py --target epstein.com --no-banner --preset recon
 ```
 
 ### All flags
 
 | Flag | Short | Description |
 |------|-------|-------------|
-| `--target` | `-t` | Target host (e.g. `example.com` or `https://example.com`) |
+| `--target` | `-t` | Target host (e.g. `fbi.gov` or `https://fbi.gov`) |
 | `--preset` | `-p` | Run a named preset (see below) |
 | `--modules` | `-m` | Comma-separated module numbers (e.g. `1,3,9`) |
 | `--output` | `-o` | Report format: `txt` (default), `html`, `json` |
@@ -139,7 +139,7 @@ python3 webcheck.py --target example.com --no-banner --preset recon
 
 WebCheck can export findings in three formats:
 
-**TXT** — plain text, good for notes and piping
+**TXT**  plain text, good for notes and piping
 ```
 [CRITICAL] LFI: LFI confirmed via ?page= payload=../../../etc/passwd
 [HIGH]     CVE: CVE-2021-41773 (CVSS 9.8): Path traversal + RCE Apache 2.4.49
@@ -164,7 +164,7 @@ WebCheck can export findings in three formats:
 
 ## Module Highlights
 
-### LFI + PHP Filter Chain (Module 25)
+### LFI + PHP Filter Chain (Module 25) Inspired by Chocapikk
 Tests **40 common PHP parameters** (`page`, `file`, `path`, `include`, `template`, `view`, `load`, `doc`, `lang`, `locale`, and more) against **15 traversal payloads** including:
 - Standard `../../../etc/passwd` traversal
 - Double-encoded and Unicode variants
@@ -189,9 +189,9 @@ Detects JWTs in response headers and common API endpoints, then checks for:
 One host per line, `#` for comments:
 ```
 # Production targets
-example.com
-https://api.example.com
-staging.example.com
+nsa.gov
+https://api.nsa.gov
+staging.nsa.gov
 
 # Third-party
 partner.com
@@ -229,4 +229,4 @@ Found a bug or want a feature? Open an issue.
 
 ---
 
-*WebCheck — because knowing it all is half the battle.*
+*WebCheck because knowing it all is half the battle.*
