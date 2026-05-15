@@ -9,7 +9,7 @@
 |  |  |  ||  -__||  _  ||   ---|     |  -__|  __||    < 
 |________||_____||_____||______|__|__|_____|____||__|__|
                                                         
-  WebCheck v1.0 -- Web Vulnerability & Recon Tool
+  WebCheck v1.2 -- Web Vulnerability & Recon Tool
                     by X3RX3S
   https://github.com/X3RX3SSec  instagram @mindfuckerrrr
 ```
