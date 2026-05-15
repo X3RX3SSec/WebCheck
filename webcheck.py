@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """
-WebCheck v1.1 -- Web Vulnerability & Recon Tool
+WebCheck v1.2 -- Web Vulnerability & Recon Tool
 Usage: python3 knowitall.py [--target host] [--preset name] [--output html|json|txt] [--delay ms] [--hosts file]
 .
 """
@@ -88,7 +88,7 @@ def banner():
 |  |  |  ||  -__||  _  ||   ---|     |  -__|  __||    < 
 |________||_____||_____||______|__|__|_____|____||__|__|
                                                         
-{RESET}{DIM}  WebCheck v1.0 -- Web Vulnerability & Recon Tool 
+{RESET}{DIM}  WebCheck v1.2 -- Web Vulnerability & Recon Tool 
                             by X3RX3S 
   https://github.com/X3RX3SSec insragram @mindfuckerrrr{RESET}
 """)
@@ -1612,6 +1612,9 @@ def main():
             else:
                 fname = save_txt_report(base, elapsed)
             ok(f"Report saved -> {fname}")
+            main()
+        else:
+            main()
     print()
 
 if __name__ == "__main__":
