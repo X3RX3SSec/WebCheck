@@ -2,7 +2,7 @@
 #!/usr/bin/env python3
 """
 WebCheck v1.2 -- Web Vulnerability & Recon Tool
-Usage: python3 knowitall.py [--target host] [--preset name] [--output html|json|txt] [--delay ms] [--hosts file]
+Usage: python3 webcheck.py [--target host] [--preset name] [--output html|json|txt] [--delay ms] [--hosts file]
 .
 """
 
